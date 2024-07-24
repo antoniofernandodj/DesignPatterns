@@ -1,0 +1,15 @@
+@startuml item
+class Person {
+  - name: string
+  - age: int
+  + setName(name: string)
+  + setAge(age: int)
+}
+
+class Car {
+  - make: string
+  - model: string
+  + setMake(make: string)
+  + setModel(model: string)
+}
+@enduml

@@ -1,0 +1,17 @@
+@startuml item2
+class Animal {
+  - name: string
+  + eat()
+}
+
+class Dog {
+  + bark()
+}
+
+class Cat {
+  + meow()
+}
+
+Animal <|-- Dog
+Animal <|-- Cat
+@enduml

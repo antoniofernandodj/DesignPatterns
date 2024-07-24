@@ -1,0 +1,40 @@
+@startuml order
+class Order {
+  - orderId: int
+  - customer: Customer
+  + addProduct(product: Product)
+  + getTotal(): double
+}
+
+class Customer {
+  - customerId: int
+  - name: string
+  + placeOrder(order: Order)
+}
+
+class Product {
+  - productId: int
+  - name: string
+  - price: double
+}
+
+Order -- Customer: customer
+Order o-- Product: products
+@enduml
+
+' Neste exemplo, temos três classes: Order, Customer e Product.
+' A classe Order usa a classe Customer para representar o cliente
+' associado a um pedido, e a classe Order também usa a classe
+' Product para representar os produtos incluídos no pedido.
+
+' As linhas Order -- Customer: customer e
+' Order o-- Product: products indicam as associações.
+' A linha Order -- Customer: customer significa que a
+' classe Order tem uma associação com a classe Customer,
+' e a linha Order o-- Product: products significa que a
+' classe Order tem uma associação com a classe Product.
+
+' Quando você renderizar este código PlantUML, ele
+' irá gerar um diagrama de classe que representa as
+' classes e suas associações. Isso mostra como a classe
+' Order usa as classes Customer e Product.

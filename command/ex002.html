@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Command Interface</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">HTTP Command Interface</h2>
+        
+        <div class="mb-4">
+            <h4 class="text-lg font-semibold">Sample Data</h4>
+            <p class="text-blue-500">http://httpbin.org/post?key=value</p>
+            <p class="text-blue-500">http://httpbin.org/get</p>
+            <p class="text-gray-700">{"ola": "mundo"}</p>
+            <p class="text-gray-700">POST</p>
+            <hr class="my-4">
+        </div>
+
+        <div class="mb-4">
+            <label for="url" class="block text-gray-700">URL:</label>
+            <input type="text" id="url" class="w-full p-2 border border-gray-300 rounded font-mono">
+        </div>
+        <div class="mb-4">
+            <label for="body" class="block text-gray-700">Body:</label>
+            <textarea id="body" class="w-full p-2 border border-gray-300 rounded font-mono"></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="method" class="block text-gray-700">Method:</label>
+            <input type="text" id="method" class="w-full p-2 border border-gray-300 rounded font-mono">
+        </div>
+        <div class="mb-4">
+            <label for="result" class="block text-gray-700">Result:</label>
+            <textarea id="result" class="w-full p-2 border border-gray-300 rounded font-mono" cols="60" rows="20"></textarea>
+        </div>
+        <button onclick="main()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send</button>
+    </div>
+
+    <script src="ex002.js"></script>
+    
+</body>
+</html>
